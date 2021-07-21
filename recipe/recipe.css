@@ -61,3 +61,6 @@ margin: 0 auto;
     text-decoration: none;
     list-style: none;
 }
+.desc > li{
+    list-style: none;
+}
