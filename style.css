@@ -10,3 +10,6 @@ a, li{
     display: flex;
     text-decoration: none;
 }
+.lis{
+    margin:  5px;
+}

@@ -60,7 +60,10 @@ margin: 0 auto;
 .unstyled > li{
     text-decoration: none;
     list-style: none;
+    
 }
 .desc > li{
     list-style: none;
+    
 }
+
