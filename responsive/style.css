@@ -1,0 +1,140 @@
+
+header{
+    background-color: aquamarine;
+    
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav, footer{
+    background-color: rgb(54, 77, 54);
+    color: aliceblue;
+
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+nav{
+    margin: 0 0px;
+    padding: 0 0px;
+}
+.link{
+border-right: 1px black solid;
+
+padding: 4px 7px;
+}
+.column{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.column1{
+    background-color: rgb(201, 173, 173);
+}
+.column2{
+    background-color: silver;
+}
+.column3{
+    background-color: rgb(129, 118, 118);
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.columns{
+    align-items: stretch;
+}
+.validator, .spn{
+    margin-left: auto;
+}
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+    @media screen and (min-width:601px) {
+    
+        body{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 8vh 5vh 76vh 8vh;
+        }
+        
+        nav{
+            
+            align-items: center;
+        }
+        .flex-r{
+            flex-direction: row;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+        
+        .column1{
+            flex-grow: 1;
+            min-width: 200px;
+            /* height: 38vh; */
+            order: 1;
+        }
+        .column2{
+           
+            min-width: 300px;
+            order: 2;
+            flex-grow: 1;
+        }
+        .column3{
+            min-width: 200px;
+            flex-grow: 1;
+            order: 3;
+        }
+        }
+
+        
+@media screen and (max-width:600px) {
+    
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 8vh 5vh 76vh 8vh;
+    }
+    
+    nav{
+        
+        align-items: center;
+    }
+    .flex-r{
+        flex-direction: row;
+    }
+    .wrap{
+        flex-wrap: wrap;
+    }
+    
+    .column1{
+        flex-grow: 1;
+        min-width: 200px;
+        order: 1;
+        /* height: 38vh; */
+    }
+    .column2{
+       
+        min-width: 300px;
+        order: 3;
+        flex-grow: 1;
+    }
+    .column3{
+        min-width: 200px;
+        flex-grow: 1;
+        order: 2;
+    }
+    }
