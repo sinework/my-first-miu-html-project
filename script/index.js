@@ -133,8 +133,22 @@ function myFunctionTestForArrays(expected, test){
     }
 }
 
+const earliestSpace=(st1, st2,st3)=>{
 
-
+  firstString=st1.split(" ");
+  secondString=st2.split(" ");
+  thirdString=st3.split(" ");
+  
+  if(firstString[0].length<secondString[0].length && secondString[0].length<thirdString[0].length){
+  
+  return st1;
+  }
+  else if (secondString[0].length<firstString[0].length && secondString[0].length<thirdString[0].length){
+  
+  return st2;}
+  else return st3;
+  }
+console.log(earliestSpace("a dfd","av dfd","adffd dfdf"))
 console.log("Expected output of max(3, 4) is 4: " + myFunctionTest(4, max(3, 4)));
 console.log("Expected output of maxOfThree(10, 20, 30) is 30: " + myFunctionTest(30, maxOfThree(10, 20, 30)));
 console.log("Expected output of isVowle(\"i\") is true: " + myFunctionTest(true, isVowel("i")));
