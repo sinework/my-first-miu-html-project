@@ -1,16 +1,33 @@
-const express = require('express');
-const app = express();
+const app= require('express')
+const path = require('path');
 
-app.get('/', (req, res) => {
-    let name = req.query.name;
-    let age = req.query.age;
-    if (name && age) {
-        res.send(`Name: ${name} Age: ${age}`);
-        
-    }else{
-        name = "person";
-        res.send(`Welcome ${name}`);
-    }
-});
+// const app=express();
+// const itemList=[];
+// app.use(express.urlencoded({ extended: false }));
+// app.get('/', (req, res, nex) => {
+// res.send(
+// `<ul>
+// ${ itemList.forEach(item=>{
+// `<li>${item}</li>`}
+// }})
+// </ul>`
+// )
+// })
 
-app.listen(3000);
+app.get('/',(req,res)=>{
+    res.send(
+        `<form action="/" method="post">
+        <input type="text" name="singleinput"/>
+        <button type="submit">submit</button>
+        </form>`
+    )
+})
+
+
+app.post('/',(req,res,next)=>{
+
+let item= req.body.singleinput;
+itemList.push(item);
+res.redirect('/');
+
+})
