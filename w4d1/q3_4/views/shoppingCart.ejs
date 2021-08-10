@@ -1,0 +1,19 @@
+<%- include('./head.ejs') %>
+<div>
+    <h2>Shopping List</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+        </tr>
+        <% for(let product in cart) { -%>
+            <tr>
+                <td><%= product %></td>
+                <td><%= cart[product] %></td>
+            </tr>
+            <%
+        } %>
+    </table>
+</div>
+
+<%- include('./end.ejs') %>
